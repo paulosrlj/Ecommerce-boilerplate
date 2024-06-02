@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:14.2
+    environment:
+      POSTGRES_USER: ecommerce_api
+      POSTGRES_PASSWORD: 123456
+    ports:
+      - '5432:5432'
+    volumes:
+      - ecommerce-boilerplate-postgres:/var/lib/postgresql/data
+  # redis:
+  #   image: redis:7.0
+  #   ports:
+  #     - '6379:6379'
+  #   volumes:
+  #     - youvisa-redis:/var/lib/redis/data
+
+
+volumes:
+  ecommerce-boilerplate-postgres:
+  #stray-pets-redis:
